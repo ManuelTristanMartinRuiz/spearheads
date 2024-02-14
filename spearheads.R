@@ -4,13 +4,12 @@ spear <- read_excel("C:/Users/manueltristan/Documents/spearheads/spearheads.xlsx
 View(spear)
 str(spear)
 class(spear)
-
 #Para importar los datos del archivo excel utilizamos la función "read_excel" y la "url" de nuestro archivo Excel
 
 
 spear <- as.data.frame(spear)
 class(spear)
-
+#Para convertur los datos a un data.frame, utilizamos la función "as.data.frame"
 
 #Ej.2
 names(spear)[names(spear) == "Mat"] <- "Materiales"
@@ -24,3 +23,18 @@ names(spear)[names(spear) == "Socle"] <- "Longitud_encaje"
 names(spear)[names(spear) == "Maxwi"] <- "Ancho_max"
 spear
 View(spear)
+#Para renombrar utilizamos la función "names" y con la función lógica "==" compara con el data.frame y le asignamos nuevos nombres
+
+#Ej.3
+# Para este ejercicio con la operación lógica $, decimos que dentro del data.frame (Spear) seleccione la columna concreta y le decimos que sean factores, y le decimos que los factores 1,2 y 3 los convierta en unos factores determinados
+spear$Contexto=factor(spear$Contexto, levels=c('1','2','3'), labels=c("s/c", "Habitacional", "Funerario"))
+spear$Conservacion=factor(spear$Conservacion, levels=c(1,2,3,4), labels=c("Excelente", "Bueno", "Regular", "Malo"))
+spear$Remache=factor(spear$Remache, levels=c(1,2), labels=c('Si', 'No'))
+spear$Materiales=factor(spear$Materiales, levels=c(1,2), labels=c('Bronce', 'Hierro'))
+View(spear)
+
+#Ej.4
+freq.mat=table(spear$Materiales)
+View(freq.mat)
+freq.con=table(spear$Contexto)
+View(freq.con)
