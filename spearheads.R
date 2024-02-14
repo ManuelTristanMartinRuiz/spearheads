@@ -5,6 +5,8 @@ View(spear)
 str(spear)
 class(spear)
 
+#Para importar los datos del archivo excel utilizamos la función "read_excel" y 
+
 spear <- as.data.frame(spear)
 class(spear)
 
@@ -14,6 +16,8 @@ names(spear)[names(spear) == "Con"] <- "Contexto"
 names(spear)[names(spear) == "Cond"] <- "Conservacion"
 names(spear)[names(spear) == "Loo"] <- "Loop"
 names(spear)[names(spear) == "Peg"] <- "Remache"
+names(spear)[names(spear) == "Date"] <- "Fecha"
 names(spear)[names(spear) == "Maxle"] <- "Longitud_max"
+names(spear)[names(spear) == "Socle"] <- "Longitud_encaje"
 spear
 View(spear)
