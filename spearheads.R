@@ -12,6 +12,7 @@ class(spear)
 names(spear)[names(spear) == "Mat"] <- "Materiales"
 names(spear)[names(spear) == "Con"] <- "Contexto"
 names(spear)[names(spear) == "Cond"] <- "Conservacion"
+names(spear)[names(spear) == "Loo"] <- "Loop"
 names(spear)[names(spear) == "Peg"] <- "Remache"
 names(spear)[names(spear) == "Maxle"] <- "Longitud_max"
 spear
