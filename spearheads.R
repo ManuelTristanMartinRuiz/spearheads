@@ -81,7 +81,7 @@ barras_horizontales_remache <- barplot(table(spear$Remache), horiz = TRUE, main 
 #Para elaborar estos graficos utilizamos la misma función que en Ej.8 pero añadimos la función "horiz" = True para que los haga horizontales.
 
 #Ej.10
-barras_material_conservacion <- barplot(table(spear$Conservacion, spear$Materiales), beside = TRUE, legend = TRUE, main = "Conservación por Material", xlab = "Conservación", col = c("lightblue", "blue"))
+barras_material_conservacion <- barplot(table(spear$Conservacion, spear$Materiales), beside = TRUE, legend = TRUE, main = "Conservación por Material", xlab = "Conservación", col = c("lightblue", "blue","purple","red"))
 #En este caso empleamos la misma función de "barplot", seleccionamos los dos datos que queremos agrupar, e incluimos una leyenda con los valores que les hemos dado a las diferentes categorías de conservación
 
 #Ej.11
